@@ -1,0 +1,26 @@
+{
+  "name": "volleyball-track",
+  "description": "Tracking volleyball stats and practicing AngularJS",
+  "main": "index.js",
+  "authors": [
+    "Kai Chen"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/KChen8516/volleyball-track",
+  "moduleType": [
+    "es6",
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0",
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.1"
+  }
+}
