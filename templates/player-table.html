@@ -1,0 +1,21 @@
+<div class="container">
+	<h2>Players Table</h2>
+	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+		 <div class="panel panel-default" ng-repeat="player in players | orderBy:'name'">
+		    <div class="panel-heading" role="tab" id="{{ player.id }}">
+		      <h4 class="panel-title">
+				<!-- replace bootstrap href="" with data-target="" to work with ngRoute -->
+		        <a role="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapse{{ player.id }}" aria-expanded="false" aria-controls="collapse{{ player.id }}">
+		          {{ player.name }}
+		        </a>
+				<a href="">
+					<span class="glyphicon glyphicon-stats" style="padding-left: 900px;"></span>
+				</a>
+		      </h4>
+		    </div>
+		    <div id="collapse{{ player.id }}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="{{ player.id }}">
+		      <div class="panel-body">{{ player.name }} hails from the city of {{ player.city }}.</div>
+		    </div>
+		 </div> <!-- ./panel panel-default -->
+	 </div> <!-- ./panel-group -->
+</div>
