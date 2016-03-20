@@ -9,5 +9,11 @@ volleyTrackControllers.controller('MainCtrl', function($scope){
 		{name: "Kai Chen", city: 'Fremont', id: 1},
 		{name: "Gabe Guerra", city: 'Fremont', id: 3}
 	];
-})
+	
+	$scope.getPlayer = function (id) {
+		return $scope.players
+	}
+});
+
+
 

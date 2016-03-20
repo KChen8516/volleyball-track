@@ -1,0 +1,66 @@
+<a ui-sref="playerTable"> < Back </a>
+<div class="container">
+	<h2 style="margin-bottom: 20px;">Score Keeper</h2>
+	<div class="media col-md-4" style="margin: 0px; padding-left: 0px;">
+	  <div class="media-left media-top">
+	    <a href="#">
+	      <img class="media-object" src="img/profile.jpg" alt="Player Image">
+	    </a>
+	  </div>
+	  <div class="media-body">
+	    <h4 class="media-heading">{{ players.name }}</h4>
+		<b>Position: </b>
+		<span ng-hide="editing" ng-click="editing= true">{{ position }}</span>
+		<input ng-show="editing" type="text" ng-blur="editing= false" ng-model="position" placeholder="Set Position">
+		<span class="glyphicon glyphicon-pencil" ng-click="editing= true"></span>
+	    <p>Setter, but would rather hit = p </p>
+	  </div>
+	</div>
+	<div class="col-md-8">
+		<table class="table table-bordered">
+			<tr>
+				<td>
+					<p>Serving</p>
+					<button type="button" class="btn btn-default">Attempt</button>
+					<button type="button" class="btn btn-default">Ace</button>
+					<button type="button" class="btn btn-default">Error</button>
+				</td>
+				<td>
+					<p>Hitting</p>
+					<button type="button" class="btn btn-default">Attempt</button>
+					<button type="button" class="btn btn-default">Kill</button>
+					<button type="button" class="btn btn-default">Error</button>
+				</td>
+				<td>
+					<p>Passing</p>
+					<button type="button" class="btn btn-default">0</button>
+					<button type="button" class="btn btn-default">1</button>
+					<button type="button" class="btn btn-default">2</button>
+					<button type="button" class="btn btn-default">3</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Defense</p>
+					<button type="button" class="btn btn-default">Attempt</button>
+					<button type="button" class="btn btn-default">Dig</button>
+					<button type="button" class="btn btn-default">Error</button>
+				</td>
+				<td>
+					<p>Setting</p>
+					<button type="button" class="btn btn-default">Attempt</button>
+					<button type="button" class="btn btn-default">Assist</button>
+					<button type="button" class="btn btn-default">Error</button>
+				</td>
+				<td>
+					<p>Blocking</p>
+					<button type="button" class="btn btn-default">Attempt</button>
+					<button type="button" class="btn btn-default">Block</button>
+					<button type="button" class="btn btn-default">Assist</button>
+					<button type="button" class="btn btn-default">Error</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div> <!-- ./container -->
+<div ui-view></div>

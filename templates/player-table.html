@@ -8,7 +8,7 @@
 		        <a role="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapse{{ player.id }}" aria-expanded="false" aria-controls="collapse{{ player.id }}">
 		          {{ player.name }}
 		        </a>
-				<a href="">
+				<a href="#/player/{{player.id}}">
 					<span class="glyphicon glyphicon-stats" style="padding-left: 900px;"></span>
 				</a>
 		      </h4>
@@ -19,3 +19,4 @@
 		 </div> <!-- ./panel panel-default -->
 	 </div> <!-- ./panel-group -->
 </div>
+<div ui-view></div>
